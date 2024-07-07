@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="landing.css">
+    <script href="index.js"></script>
+</head>
+<body style="background-color: black;">
+    <div class="c1">TIC</div>
+    <div class="c2">TAC</div>
+    <div class="c3">TOE</div>
+    <div class="c4">E</div>
+    <div class="c5">NJOY</div>
+    <div class="c6">Y</div>
+    <div class="c7">OURSELF</div>
+    <div class="c8">THE BEST</div>
+    <div ><a href="againstFriend.html" class="c9">PLAY AGAINST A FRIEND</a></div>
+    <div ><a href="ai.html" class="c10" >PLAY AGAINST AI</a></div>
+    <script>
+        const elements = document.querySelectorAll('.c1, .c2, .c3');
+
+        elements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                elements.forEach(el => {
+                    if (el !== element) {
+                        el.style.color = 'rgb(49, 48, 48)';
+                    }
+                });
+            });
+
+            element.addEventListener('mouseleave', () => {
+                elements.forEach(el => {
+                    el.style.color = 'white'; 
+                });
+            });
+        });
+    </script>
+</body>
+</html>
